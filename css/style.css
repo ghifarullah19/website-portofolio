@@ -1,0 +1,860 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Work+Sans:wght@100&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--main-font-color);
+  font-family: var(--font);
+  scroll-behavior: smooth;
+}
+
+.jumbotron .heading,
+.about .heading,
+.education .heading,
+.experience .heading,
+.project .heading,
+.contact .heading {
+  position: relative;
+}
+
+.jumbotron .heading::after,
+.about .heading::after,
+.education .heading::after,
+.experience .heading::after,
+.project .heading::after,
+.contact .heading::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--main-color);
+}
+
+:root {
+  --font: "Montserrat", sans-serif;
+  --prime-font: "Work Sans", sans-serif;
+  --bg: #1a1c20;
+  --main-color: #3a18f9;
+  --main-font-color: #fdfbfb;
+  --sec-font-color: #fcf1f1b4;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  background-color: #151618;
+  justify-content: space-around;
+  height: 60px;
+  align-items: center;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+nav .logo {
+  font-size: 1.5em;
+  color: var(--sec-font-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav ol {
+  display: flex;
+  list-style: none;
+  width: 40%;
+  justify-content: space-between;
+}
+
+nav ol li a {
+  color: var(--sec-font-color);
+  text-decoration: none;
+  font-size: 1em;
+  padding: 0.5em 1.5em;
+  border-radius: 10px;
+}
+
+nav ol li a:hover {
+  transition: 0.8s;
+  background: var(--main-color);
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  opacity: 0;
+  cursor: pointer;
+  left: -5px;
+  top: -3px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: var(--sec-font-color);
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:last-child {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:last-child {
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+}
+/* akhir navbar */
+
+/* Jumbotron */
+.jumbotron {
+  box-sizing: border-box;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.jumbotron .left_box {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.jumbotron .left_box h2 {
+  font-size: 3em;
+  font-weight: 700;
+  color: var(--main-font-color);
+}
+
+.jumbotron .left_box p {
+  font-size: 1.5em;
+  font-weight: 500;
+  color: var(--sec-font-color);
+}
+
+.jumbotron .left_box button {
+  font-size: 1.2em;
+  background: none;
+  color: var(--sec-font-color);
+  cursor: pointer;
+  border: 1px solid var(--main-color);
+  width: 7em;
+  height: 2.2em;
+}
+
+.jumbotron .left_box button:hover {
+  background: var(--main-color);
+  transition: 0.4s;
+}
+
+.jumbotron .right_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jumbotron .right_box img {
+  width: 400px;
+  height: 400px;
+}
+/* Akhir Jumbotron */
+
+/* About */
+.about {
+  box-sizing: border-box;
+  background: #000;
+  padding: 50px 100px;
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+}
+
+.about .left_box {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about .left_box h3 {
+  margin-top: 0;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--main-font-color);
+}
+
+.about .left_box p {
+  text-align: center;
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--sec-font-color);
+}
+
+.about .left_box p {
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--sec-font-color);
+}
+
+.about .right_box {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .right_box h3 {
+  margin-top: 0;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--main-font-color);
+}
+
+.about .right_box .skills-box {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about .right_box .skills-box img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin: 10px;
+}
+/* Akhir About */
+
+/* Education */
+.education {
+  box-sizing: border-box;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.education h3 {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--main-font-color);
+}
+
+.education p {
+  margin-top: -10px;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--sec-font-color);
+}
+
+.education .container {
+  margin-top: 40px;
+  width: 90%;
+  display: flex;
+  align-items: start;
+  justify-content: space-evenly;
+}
+
+.education .container .education-box {
+  margin: 0 10px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 250px;
+  border: 2px solid var(--main-color);
+  border-radius: 10px;
+}
+
+.education .container .education-box img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+/* Akhir Education */
+
+/* Experience */
+.experience {
+  box-sizing: border-box;
+  background-color: black;
+  margin-bottom: 100px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.experience h3 {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--main-font-color);
+}
+
+.experience p {
+  margin-top: -10px;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--sec-font-color);
+}
+
+.experience .container {
+  margin-top: 40px;
+  width: 90%;
+  display: flex;
+  align-items: start;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.experience .container .experience-box {
+  margin: 10px 10px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 250px;
+  border: 2px solid var(--main-color);
+  border-radius: 10px;
+}
+
+.experience .container .experience-box img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.experience .container .experience-box h4 {
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--main-font-color);
+  text-align: center;
+}
+/* Akhir Experience */
+
+/* Project */
+.project {
+  box-sizing: border-box;
+  margin-top: -50px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project h3 {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--main-font-color);
+}
+
+.project p {
+  margin-top: -10px;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--sec-font-color);
+}
+
+.project .container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.project .container a {
+  margin: 10px 10px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 200px;
+  height: 80px;
+  border: 2px solid var(--main-color);
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  margin: 1em 0.8em 0 0;
+  position: relative;
+}
+
+.project .container a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--main-color);
+  display: flex;
+  clip-path: circle(0% at 50% 50%);
+  transition: 0.4s;
+}
+.project .container a::after {
+  content: "\f0a9";
+  position: absolute;
+  bottom: 0;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 700;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-size: 2em;
+  clip-path: circle(0% at 50% 50%);
+  transition: 0.4s;
+}
+.project .container a:hover::before,
+.project .container a:hover::after {
+  clip-path: circle(100% at 50% 50%);
+}
+
+/* Akhir Project */
+
+/* Contact */
+.contact {
+  box-sizing: border-box;
+  background-color: black;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact h3 {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--main-font-color);
+}
+
+.contact .container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.contact .contact-info {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact .contact-info a {
+  text-decoration: none;
+  color: var(--main-font-color);
+}
+
+.contact .contact-info .contact-box {
+  margin: 10px 0;
+  padding: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 200px;
+  height: 100px;
+  border: 2px solid var(--main-color);
+  border-radius: 10px;
+}
+
+.contact .contact-info .contact-box:hover {
+  background: var(--main-color);
+  transition: 0.4s;
+}
+
+.contact .contact-info .contact-box i {
+  font-size: 3em;
+  color: var(--main-font-color);
+}
+
+.contact .alert {
+  display: none;
+}
+.contact .alert-body {
+  width: 400px;
+  height: 50px;
+  overflow: hidden;
+  margin: 7px 0;
+  color: #f7f7f7;
+  border-radius: 50px;
+  background: #198754;
+}
+.contact p {
+  margin-top: -10px;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--sec-font-color);
+}
+.contact .loading {
+  display: none;
+}
+.contact .loading-body {
+  width: 400px;
+  height: 50px;
+  overflow: hidden;
+  margin: 7px 0;
+  color: #f7f7f7;
+  border-radius: 50px;
+  background: var(--main-color);
+}
+.contact form {
+  flex-direction: column;
+  min-width: 40%;
+}
+.contact form :is(input, textarea, button) {
+  margin: 0.8em;
+  width: 100%;
+  height: 45px;
+  background: #3535366e;
+  color: white;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  padding: 0.2em 1em;
+}
+.contact form textarea {
+  resize: none;
+  height: 80px;
+}
+.contact form .btn-submit {
+  background: none;
+  color: var(--sec-font-color);
+  border: 1px solid var(--main-color);
+  cursor: pointer;
+  height: 40px;
+  font-size: 1em;
+}
+.contact form button:hover {
+  background: var(--main-color);
+  transition: 0.4s;
+}
+/* Akhir Contact */
+
+/* logo */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #151618;
+}
+.copyright {
+  padding: 1em 1em;
+  cursor: pointer;
+}
+.copyright a {
+  text-decoration: none;
+  color: var(--sec-font-color);
+}
+/* akhir logo */
+
+@media screen and (max-width: 768px) {
+  /* Navbar */
+  nav {
+    width: 100vw;
+  }
+
+  nav .logo {
+    font-size: 1.2em;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav ol {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 80%;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: #151618;
+    transform: translateX(100%);
+    transition: all 1s;
+  }
+
+  nav ol.slide {
+    transform: translateX(0%);
+  }
+  /* Akhir Navbar */
+
+  /* Jumbotron */
+  .jumbotron {
+    width: 100vw;
+    flex-direction: column-reverse;
+    margin-top: 60px;
+  }
+
+  .jumbotron .left_box {
+    align-items: center;
+    text-align: center;
+  }
+
+  .jumbotron .left_box h2 {
+    font-size: 2em;
+  }
+
+  .jumbotron .left_box p {
+    font-size: 1em;
+  }
+
+  .jumbotron .left_box button {
+    font-size: 1em;
+  }
+
+  .jumbotron .right_box {
+    margin-top: 50px;
+  }
+
+  .jumbotron .right_box img {
+    width: 300px;
+    height: 300px;
+  }
+  /* Akhir Jumbotron */
+
+  /* About */
+  .about {
+    padding: 40px 0;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+  }
+
+  .about .left_box {
+    width: 80%;
+    margin-bottom: 50px;
+  }
+
+  .about .left_box h3 {
+    font-size: 2em;
+  }
+
+  .about .left_box p {
+    font-size: 1em;
+  }
+
+  .about .right_box {
+    width: 80%;
+  }
+
+  .about .right_box h3 {
+    font-size: 2em;
+  }
+
+  .about .right_box .skills-box {
+    width: 100%;
+  }
+  /* Akhir About */
+
+  /* Education */
+  .education {
+    margin-bottom: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .education .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .education .container .education-box {
+    margin: 10px 0;
+    width: 80%;
+  }
+
+  /* Akhir Education */
+
+  /* Experience */
+  .experience {
+    margin-bottom: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .experience .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experience .container .experience-box {
+    margin: 10px 0;
+    width: 80%;
+  }
+  /* Akhir Experience */
+
+  /* Projects */
+  .project {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 100px;
+  }
+
+  .project .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project .container a {
+    margin: 10px 0;
+    width: 90%;
+    font-size: 0.9em;
+    height: 60px;
+  }
+
+  .project .container a::after {
+    left: 0;
+  }
+
+  .project .container a:hover::before,
+  .project .container a:hover::after {
+    clip-path: circle(100% at 50% 50%);
+  }
+
+  /* Akhir Projects */
+
+  /* Contact */
+
+  .contact .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact .contact-info {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 5px;
+  }
+
+  .contact .contact-info a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .contact .contact-info .contact-box {
+    width: 80%;
+  }
+
+  .contact .loading {
+    display: none;
+  }
+
+  .contact .loading-body {
+    width: 90vw;
+    overflow: hidden;
+  }
+
+  .contact .loading-body p {
+    font-size: 16px;
+    font-weight: 200px;
+  }
+
+  .contact .alert {
+    display: none;
+  }
+
+  .contact .alert-body {
+    width: 90vw;
+    overflow: hidden;
+  }
+
+  .contact .alert-body p {
+    font-size: 14px;
+    font-weight: 200px;
+  }
+
+  .contact form {
+    margin-top: 20px;
+    max-width: 80%;
+  }
+
+  .contact form :is(input, textarea, button) {
+    margin: 0.8em;
+    width: 100%;
+    height: 45px;
+    background: #3535366e;
+    color: white;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    padding: 0.2em 1em;
+  }
+
+  .contact form textarea {
+    resize: none;
+    height: 80px;
+  }
+
+  .contact form .btn-submit {
+    background: none;
+    color: var(--sec-font-color);
+    border: 1px solid var(--main-color);
+    cursor: pointer;
+    height: 40px;
+    font-size: 1em;
+  }
+
+  .contact form button:hover {
+    background: var(--main-color);
+    transition: 0.4s;
+  }
+
+  /* Akhir Contact */
+}
