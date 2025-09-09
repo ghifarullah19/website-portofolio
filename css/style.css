@@ -36,7 +36,7 @@ body {
   --font: "Montserrat", sans-serif;
   --prime-font: "Work Sans", sans-serif;
   --bg: #1a1c20;
-  --main-color: #3a18f9;
+  --main-color: #976927;
   --main-font-color: #fdfbfb;
   --sec-font-color: #fcf1f1b4;
 }
@@ -157,19 +157,23 @@ nav ol li a:hover {
   color: var(--sec-font-color);
 }
 
-.jumbotron .left_box button {
+.jumbotron .left_box .btn-preview-cv {
+  display: inline-block;
   font-size: 1.2em;
   background: none;
   color: var(--sec-font-color);
   cursor: pointer;
   border: 1px solid var(--main-color);
-  width: 7em;
+  width: 9em;
   height: 2.2em;
+  text-align: center;
+  line-height: 2.2em;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.4s;
 }
-
-.jumbotron .left_box button:hover {
+.jumbotron .left_box .btn-preview-cv:hover {
   background: var(--main-color);
-  transition: 0.4s;
 }
 
 .jumbotron .right_box {
@@ -179,8 +183,11 @@ nav ol li a:hover {
 }
 
 .jumbotron .right_box img {
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--main-color);
 }
 /* Akhir Jumbotron */
 
@@ -401,7 +408,12 @@ nav ol li a:hover {
   flex-wrap: wrap;
 }
 
+.project .container.project-aiml {
+  margin-bottom: 30px;
+}
+
 .project .container a {
+  position: relative;
   margin: 10px 10px;
   padding: 5px;
   display: flex;
@@ -449,6 +461,16 @@ nav ol li a:hover {
 .project .container a:hover::before,
 .project .container a:hover::after {
   clip-path: circle(100% at 50% 50%);
+}
+.project .container a .project-logo-top {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  z-index: 2;
+}
+.project .container a .project-logo-top i {
+  font-size: 1.3em;
+  color: var(--main-color);
 }
 
 /* Akhir Project */
