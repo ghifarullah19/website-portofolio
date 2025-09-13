@@ -466,7 +466,7 @@ nav ol li a:hover {
   position: absolute;
   top: 10px;
   right: 15px;
-  z-index: 2;
+  z-index: 1;
 }
 .project .container a .project-logo-top i {
   font-size: 1.3em;
@@ -507,6 +507,7 @@ nav ol li a:hover {
   align-items: center;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .contact .contact-info a {
